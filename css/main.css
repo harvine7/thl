@@ -2618,6 +2618,13 @@ footer .menu li a:hover {
     color: #f97794;
 }
 
+a.call {
+    background-color: #553a31;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 30px;
+}
+
 .instagram-footer {
     padding: 0;
 }

@@ -370,4 +370,7 @@ ul.navlist > li {
     .btn-nav {
         width: 100%;
     }
+    .footer-info {
+        margin-bottom: 30px;
+    }
 }
