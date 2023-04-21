@@ -36,15 +36,25 @@
     <!-- Icons -->
     <script src="https://kit.fontawesome.com/a8ab553887.js" crossorigin="anonymous"></script>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-821455278"></script>
+    <!-- Event snippet for Apr Phone Call conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'AW-821455278');
+        function gtag_report_conversion(url) {
+            var callback = function () {
+                if (typeof (url) != 'undefined') {
+                    window.location = url;
+                }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-821455278/115hCPeQ7fsDEK7T2YcD',
+                'value': 1.0,
+                'currency': 'USD',
+                'event_callback': callback
+            });
+            return false;
+        }
     </script>
+
 
 
 
@@ -817,7 +827,9 @@
                     </div>
                     <br>
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 col-mb-12 text-center footer-info">
-                        <a href="tel:+6591444649" class="call" onclick="gtag('event', 'conversion', {'send_to': 'AW-821455278'});"><i class="fa-solid fa-phone"> </i> &nbsp; Call Us : +65
+                        <a href="tel:+6591444649" class="call"
+                            onclick="gtag('event', 'conversion', {'send_to': 'AW-821455278/115hCPeQ7fsDEK7T2YcD'});"><i
+                                class="fa-solid fa-phone"> </i> &nbsp; Call Us : +65
                             9144 4649</a>
                     </div>
                     <br>
